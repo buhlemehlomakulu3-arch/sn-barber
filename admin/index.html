@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>SN Admin</title>
+<link rel="icon" href="/images/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/shared/theme.css"><link rel="stylesheet" href="/admin/admin.css">
+</head><body>
+<div id="login" class="login hidden"><form id="loginForm" class="box"><img src="/images/logo.png" width="90" alt="">
+<h2>Admin login</h2><label for="pw">Password</label><input id="pw" type="password" autocomplete="current-password" required>
+<p id="loginErr" class="err"></p><button class="btn" type="submit">Log in</button><p><a href="/">← Customer site</a></p></form></div>
+<div id="app" class="hidden">
+<header class="top"><b>SN Admin</b><nav id="tabs"><button data-t="dash" class="on">Dashboard</button><button data-t="bookings">Bookings <span id="pendBadge" class="badge hidden"></span></button><button data-t="services">Services</button><button data-t="gallery">Gallery</button><button data-t="settings">Settings</button></nav>
+<span><a href="/" target="_blank">View site</a> · <a href="#" id="logout">Log out</a></span></header>
+<div id="pwBanner" class="banner hidden">You are using the default password. Change it under Settings → Password.</div>
+<main>
+<section id="t-dash"></section>
+<section id="t-bookings" class="hidden">
+ <div class="bar"><select id="bFilter"><option value="all">All</option><option value="pending">Pending</option><option value="confirmed">Confirmed</option><option value="completed">Completed</option><option value="cancelled">Cancelled</option><option value="no-show">No-show</option></select>
+ <input type="date" id="bDate" title="Filter by date"><button class="btn sm ghost" id="bClear">Clear date</button><button class="btn sm" id="bNew">+ Manual booking</button></div>
+ <div id="bList"></div></section>
+<section id="t-services" class="hidden"><div id="sList"></div><h3>Add service</h3>
+ <div class="row"><input id="nsName" placeholder="Name"><input id="nsPrice" type="number" min="0" placeholder="Price (R)"><input id="nsDesc" placeholder="Description"><label class="chk"><input type="checkbox" id="nsHouse"> House call</label><button class="btn sm" id="nsAdd">Add</button></div></section>
+<section id="t-gallery" class="hidden"><div class="bar"><input id="upCap" placeholder="Caption (optional)"><input type="file" id="upFile" accept="image/jpeg,image/png,image/webp"><button class="btn sm" id="upBtn">Upload</button></div><div id="gList" class="gadm"></div></section>
+<section id="t-settings" class="hidden"></section>
+</main></div>
+<div id="modal" class="modal hidden"><div class="box" id="modalBox"></div></div>
+<div id="toast" class="toast hidden"></div>
+<script src="/admin/admin.js"></script></body></html>

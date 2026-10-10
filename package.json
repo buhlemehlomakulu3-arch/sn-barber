@@ -1,0 +1,14 @@
+{
+  "name": "sn-barber",
+  "version": "1.0.0",
+  "description": "SN Sergio Nxobei The Barber - customer site and admin panel",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

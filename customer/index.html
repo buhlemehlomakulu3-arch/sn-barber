@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SN – Sergio Nxobei The Barber | Khayelitsha</title>
+<meta name="description" content="Fades, high tops, tapers and more by Sergio Nxobei in Khayelitsha Site B. House calls around Cape Town. Book online.">
+<link rel="icon" href="/images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/shared/theme.css"><link rel="stylesheet" href="/style.css">
+</head><body>
+<div id="announce" class="announce hidden"></div>
+<header class="nav"><a href="#top" class="brand"><img src="/images/logo.png" alt="SN logo"><span id="brandName">Sergio Nxobei</span></a>
+<nav><a href="#services">Prices</a><a href="#gallery">Gallery</a><a href="#book">Book</a><a href="#visit">Visit</a></nav></header>
+<section class="hero" id="top"><img class="hero-logo" src="/images/logo.png" alt="SN Sergio Nxobei The Barber logo">
+<h1 id="heroName">Sergio Nxobei<br>The Barber</h1><p id="tagline"></p>
+<a class="btn" href="#book">Book your cut</a> <a class="btn ghost" id="heroWa" href="#">WhatsApp</a></section>
+<section id="services" class="wrap"><h2>Price List</h2><div id="svcList" class="svc-grid"></div><p id="areaNote" class="muted"></p></section>
+<section id="gallery" class="wrap"><h2>Gallery</h2><div id="galGrid" class="gal"></div></section>
+<section id="book" class="wrap narrow"><h2>Book an appointment</h2>
+<form id="bookForm" class="rv" novalidate>
+<label for="fSvc">Service</label><select id="fSvc" required></select>
+<label for="fDate">Date</label><input type="date" id="fDate" required>
+<label>Time</label><div id="slots" class="slots"><span class="muted">Choose a date first</span></div>
+<div id="addrWrap" class="hidden"><label for="fAddr">Your address (house call)</label><input id="fAddr" maxlength="200" autocomplete="street-address"></div>
+<label for="fName">Your name</label><input id="fName" maxlength="60" autocomplete="name" required>
+<label for="fPhone">Phone / WhatsApp</label><input id="fPhone" type="tel" maxlength="25" autocomplete="tel" required>
+<label for="fNotes">Notes (optional)</label><textarea id="fNotes" rows="2" maxlength="300"></textarea>
+<input id="fWeb" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<p id="formErr" class="err hidden" role="alert"></p>
+<button class="btn" id="submitBtn" type="submit">Confirm booking</button></form>
+<div id="done" class="done hidden"></div></section>
+<section id="visit" class="wrap narrow"><h2>Visit</h2><p id="locLine"></p><p><a id="phoneLink" href="#"></a></p><table id="hoursTbl" class="hours rv"></table></section>
+<footer><p>© <span id="yr"></span> <span id="ftName"></span> · <a href="/admin/">Admin</a></p></footer>
+<a id="waFloat" class="wa-float" href="#" aria-label="WhatsApp" target="_blank" rel="noopener">WhatsApp</a>
+<div id="lb" class="lb hidden"><button id="lbClose" aria-label="Close">×</button><img id="lbImg" alt=""><p id="lbCap"></p></div>
+<script src="/app.js"></script></body></html>
